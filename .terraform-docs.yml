@@ -1,0 +1,15 @@
+formatter: markdown
+
+recursive:
+  enabled: true
+
+output:
+  file: README.md
+
+sections:
+  show:
+    - header
+    - providers
+    - requirements
+    - inputs
+    - outputs
