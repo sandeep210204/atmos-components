@@ -1,0 +1,36 @@
+base_path: .
+
+components:
+
+  terraform:
+    base_path: components/terraform
+
+  helm:
+    base_path: components/helm
+
+stacks:
+
+  base_path: stacks
+
+schemas:
+
+  jsonschema:
+    base_path: schemas/jsonschema
+
+logs:
+  level: Info
+
+workflows:
+  base_path: workflows
+
+integrations:
+
+  terraform:
+    init:
+      - terraform init
+
+    plan:
+      - terraform plan
+
+    apply:
+      - terraform apply
