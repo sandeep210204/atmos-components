@@ -1,25 +1,33 @@
 name: Terraform Docs
 
 on:
-
+  pull_request:
   push:
+    branches:
+      - main
 
 jobs:
-
   docs:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
 
-      - uses: terraform-docs/gh-actions@v1
+      - name: Check for Terraform modules
+        id: modules
+        run: |
+          if find components/terraform -name "*.tf" | grep -q .; then
+            echo "found=true" >> $GITHUB_OUTPUT
+          else
+            echo "found=false" >> $GITHUB_OUTPUT
+          fi
 
+      - name: Generate docs
+        if: steps.modules.outputs.found == 'true'
+        uses: terraform-docs/gh-actions@v1
         with:
-
-          working-dir: .
-
+          working-dir: components/terraform
+          recursive: true
           output-file: README.md
-
+          output-method: inject
           git-push: true
