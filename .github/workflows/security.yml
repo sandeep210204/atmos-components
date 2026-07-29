@@ -1,0 +1,21 @@
+name: Security
+
+on:
+
+  pull_request:
+
+jobs:
+
+  security:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - run: tfsec .
+
+      - run: checkov -d .
+
+      - run: gitleaks detect
