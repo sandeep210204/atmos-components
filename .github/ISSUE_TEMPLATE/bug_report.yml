@@ -1,0 +1,34 @@
+name: Bug Report
+
+description: Report a Terraform module bug
+
+title: "[BUG] "
+
+labels:
+  - bug
+
+body:
+
+  - type: textarea
+
+    id: description
+
+    attributes:
+
+      label: Description
+
+  - type: textarea
+
+    id: expected
+
+    attributes:
+
+      label: Expected Behaviour
+
+  - type: textarea
+
+    id: logs
+
+    attributes:
+
+      label: Logs
