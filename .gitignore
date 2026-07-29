@@ -1,0 +1,15 @@
+.terraform
+*.tfstate
+*.tfstate.*
+crash.log
+
+.terraform.lock.hcl
+
+.idea
+.vscode
+
+coverage.out
+
+vendor
+
+.DS_Store
