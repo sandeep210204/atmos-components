@@ -6,7 +6,7 @@ spec:
 
   sources:
 
-    - component: github.com/company/atmos-components
+    - component: github.com/sandeep210204/atmos-components
 
       version: v1.0.0
 
