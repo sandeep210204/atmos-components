@@ -1,0 +1,8 @@
+title = "Enterprise Gitleaks Configuration"
+
+[allowlist]
+description = "Allowed files"
+paths = [
+  '''README.md''',
+  '''LICENSE'''
+]
