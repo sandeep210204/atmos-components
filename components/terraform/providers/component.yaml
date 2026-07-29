@@ -1,0 +1,17 @@
+apiVersion: atmos/v1
+
+kind: Component
+
+metadata:
+
+  name: providers
+
+  description: Shared AWS Provider Configuration
+
+  owner: platform-team
+
+  version: 1.0.0
+
+spec:
+
+  type: shared
