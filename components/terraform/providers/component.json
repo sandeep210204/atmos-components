@@ -1,0 +1,7 @@
+{
+  "name": "providers",
+  "owner": "platform-team",
+  "version": "1.0.0",
+  "type": "shared",
+  "awsProvider": "5.x"
+}
