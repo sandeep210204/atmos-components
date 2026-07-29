@@ -1,0 +1,19 @@
+apiVersion: atmos/v1
+
+kind: AtmosVendorConfig
+
+spec:
+
+  sources:
+
+    - component: github.com/sandeep210204/atmos-components
+
+      version: v1.0.0
+
+      targets:
+
+        - components/terraform
+
+        - catalog
+
+        - stacks
